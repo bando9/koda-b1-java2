@@ -8,9 +8,7 @@ public class PermanentEmployee extends Employee{
     @Override 
     public void increaseSalary(int amount){
         System.out.println("Salary Increase: " + "Rp." + amount);
-        
-        increaseSalary2(amount);
-
+        addSalary(amount);
         System.out.println("Current Salary: " + "Rp." + getSalary());
     }
 }

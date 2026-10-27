@@ -15,6 +15,11 @@ public class App
         EmployeeService andiService = new EmployeeService(andi);
         EmployeeService budiService = new EmployeeService(budi);
 
+        andiService.showEmployee();
+
+        System.out.println("====================");
+        System.out.println();
+
         budiService.showEmployee();
 
         budiService.giveRaise(300000);

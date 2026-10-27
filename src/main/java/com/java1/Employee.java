@@ -36,21 +36,11 @@ public abstract class Employee {
     // method abstract
     public abstract void increaseSalary(int amount);
 
-    public void increaseSalary1(int amount){
+    public void addSalary(int amount){
         if(amount <= 0){
             System.out.println("Error: Kenaikan gaji harus lebih dari 0");
-        }else if(amount >= 500000){
-            System.out.println("Error: Kenaikan gaji maksimal Rp500000");
-        } else{
-            this.salary += amount;
-        }
-    }
-
-    public void increaseSalary2(int amount){
-        if(amount <= 0){
-            System.out.println("Error: Kenaikan gaji harus lebih dari 0");
-        } else {   
-            this.salary += amount;
+        } else {
+            salary+=amount;
         }
     }
 }

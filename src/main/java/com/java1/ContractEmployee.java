@@ -6,11 +6,16 @@ public class ContractEmployee extends Employee {
     }
 
     @Override
-    public void increaseSalary(int amount){
+    public void increaseSalary(int amount){   
         System.out.println("Salary Increase: " + "Rp." + amount);
-        
-        increaseSalary1(amount);
 
+        if(amount >= 500000){
+            System.out.println("Error: Kenaikan gaji maksimal Rp500000");
+        } else{
+            addSalary(amount);
+        }
+        
         System.out.println("Current Salary: " + "Rp." + getSalary());
+        
     }
 }
