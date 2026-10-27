@@ -1,12 +1,11 @@
 package com.java1;
 
 // class
-public class Employee {
-    String employeeID;
-    String name;
-    String position;
-    String department;
-    // encapsulation
+public abstract class Employee {
+    private String employeeID;
+    private String name;
+    private String position;
+    private String department;
     private int salary;
     
     // Constructor
@@ -18,19 +17,40 @@ public class Employee {
         this.salary = salary;
     }
 
-    // method
-    public void increaseSalary(int amount){
-        System.out.println("Salary Increase: " + "Rp. " + amount);
-
-        if(amount <= 0){
-            System.out.println("Error: Kenaikan gaji harus lebih dari 0");
-        } else{
-            salary += amount;    
-        }
-        System.out.println("Current Salary: " + "Rp. " + salary + "\n");
+    public String getEmployeeID(){
+        return employeeID;
+    }
+    public String getName(){
+        return name;
+    }
+    public String getPosition(){
+        return position;
+    }
+    public String getDepartment(){
+        return department;
+    }
+    public int getSalary(){
+        return salary;
     }
 
-    public int getSalary(){
-        return  salary;
+    // method abstract
+    public abstract void increaseSalary(int amount);
+
+    public void increaseSalary1(int amount){
+        if(amount <= 0){
+            System.out.println("Error: Kenaikan gaji harus lebih dari 0");
+        }else if(amount >= 500000){
+            System.out.println("Error: Kenaikan gaji maksimal Rp500000");
+        } else{
+            this.salary += amount;
+        }
+    }
+
+    public void increaseSalary2(int amount){
+        if(amount <= 0){
+            System.out.println("Error: Kenaikan gaji harus lebih dari 0");
+        } else {   
+            this.salary += amount;
+        }
     }
 }

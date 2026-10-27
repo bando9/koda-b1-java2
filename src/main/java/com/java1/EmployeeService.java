@@ -8,10 +8,10 @@ public class EmployeeService {
     }
 
     public void showEmployee(){
-        System.out.println("Employee ID: " + employee.employeeID);
-        System.out.println("Name: " + employee.name);
-        System.out.println("Position: " + employee.position);
-        System.out.println("Department: " + employee.department);
+        System.out.println("Employee ID: " + employee.getEmployeeID());
+        System.out.println("Name: " + employee.getName());
+        System.out.println("Position: " + employee.getPosition());
+        System.out.println("Department: " + employee.getDepartment());
         System.out.println("Salary: " + "Rp. " + employee.getSalary() + "\n");
     }
 
